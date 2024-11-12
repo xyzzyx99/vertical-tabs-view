@@ -146,7 +146,9 @@ export const CreateTabElement = (
   site.className = "site-link";
   const favIcon = document.createElement("img");
   favIcon.setAttribute("id", "tab_icon_" + tab.id);
-  favIcon.src = tab.favIconUrl || "";
+//  favIcon.src = tab.favIconUrl || "";
+// correct no favicon
+  favIcon.src = tab.favIconUrl || "./img/Chrome.webp"
   favIcon.style.cssText = "width: 20px;height: 20px;";
   siteWrapper.appendChild(favIcon);
   siteWrapper.appendChild(site);

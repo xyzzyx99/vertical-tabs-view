@@ -372,7 +372,9 @@ const UpdateTabOnly = async (tabId, updatedAt) => {
   if (!updateAgoElement || !titleElement || !iconElement) return;
 
   titleElement.textContent = tab.title;
-  iconElement.src = tab.favIconUrl;
+//  iconElement.src = tab.favIconUrl;
+// correct no favicon
+  iconElement.src = tab.favIconUrl || "./img/Chrome.webp"
 
   let updatedAgoMilisecondsAgo = Date.now() - tab.updatedAt;
   const updatedAgoSeconds = parseInt(updatedAgoMilisecondsAgo / 1000);
